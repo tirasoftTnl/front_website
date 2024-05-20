@@ -16,8 +16,8 @@ export default function Footer() {
     }, [])
     return (
       <section id="footer">
-        <footer class="footer">
-            <div class="footer__container container grid">
+        <footer className="footer">
+            <div className="footer__container container grid">
                 <div>
                     <a href="/" className="footer__logo">
                         <i className="ri-book-3-line"></i>Website
@@ -28,10 +28,10 @@ export default function Footer() {
                         Products from all the internet<br />
                     </p>
                 </div>
-                <div class="footer__data grid">
+                <div className="footer__data grid">
                     <div>
-                        <h3 class="footer__title">About</h3>
-                        <ul class="footer__links">
+                        <h3 className="footer__title">About</h3>
+                        <ul className="footer__links">
                             <li>
                                 <a href="/" className="footer__link">Awards</a>
                             </li>
@@ -52,39 +52,39 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 class="footer__title">Company</h3>
-                        <ul class="footer__links">
+                        <h3 className="footer__title">Company</h3>
+                        <ul className="footer__links">
                             <li>
-                                <a href="/" class="footer__link">Blogs</a>
+                                <a href="/" className="footer__link">Blogs</a>
                             </li>
 
                             <li>
-                                <a href="/" class="footer__link">Community</a>
+                                <a href="/" className="footer__link">Community</a>
                             </li>
 
                             <li>
-                                <a href="/" class="footer__link">Our team</a>
+                                <a href="/" className="footer__link">Our team</a>
                             </li>
                             
                             <li>
-                                <a href="/" class="footer__link">Help center</a>
+                                <a href="/" className="footer__link">Help center</a>
                             </li>
                             
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="footer__title">Contact</h3>
-                        <ul class="footer__links">
+                        <h3 className="footer__title">Contact</h3>
+                        <ul className="footer__links">
                             {FooterData && (
                                 <>
                             <li>
-                                <adress class="footer__info">
+                                <adress className="footer__info">
                                 {FooterData[0].adress}
                                 </adress>
                             </li>
                             <li>
-                                <adress class="footer__info">
+                                <adress className="footer__info">
 
                                 <a href={`mailto:${FooterData[0].email}`}>{FooterData[0].email}</a>
                                 </adress>
@@ -99,25 +99,25 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 class="footer__title">Social</h3>
-                        <div class="footer__social">
-                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener" class="footer__social-link">
-                                <i class="ri-facebook-line"></i>
+                        <h3 className="footer__title">Social</h3>
+                        <div className="footer__social">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
+                                <i className="ri-facebook-line"></i>
                             </a>
 
                             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
-                                <i class="ri-instagram-line"></i>
+                                <i className="ri-instagram-line"></i>
                             </a>
 
                             <a href="https://twitter.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
-                                <i class="ri-twitter-x-line"></i>
+                                <i className="ri-twitter-x-line"></i>
                             </a>     
                         </div>
                     </div>
                 </div>
             </div>
 
-            <span class="footer__copy">
+            <span className="footer__copy">
                 &#169; All Rights Reserved By Tirasoft
             </span>
         </footer>

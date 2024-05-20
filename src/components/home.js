@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Navigation } from 'swiper';
 
-export default function Header() {
+export default function Home() {
   const [home_images_backend, setHomeImagesBackend] = useState([])
 
   useEffect(() => {

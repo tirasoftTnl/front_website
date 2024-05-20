@@ -1,54 +1,47 @@
+import React from 'react';
+import '../App.css'
+import { Link } from 'react-router-dom';
 export default function Header() {
-    return (
-      <section>
-        <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#home" class="nav__logo">
-               <i class="ri-book-3-line"></i> logo
-            </a>
-            <div class="nav__menu">
-               <ul class="nav__list">
+  return (
+    <section>
+      <header className="header" id="header">
+        <nav className="nav container">
+          <Link to="/" className="nav__logo">
+            <i className="ri-book-3-line"></i> logo
+          </Link>
+          <div className="nav__menu">
+            <ul className="nav__list">
+              <li className="nav__item">
+                <Link to="/" className="nav__link"><span>Home</span></Link>
+              </li>
+              <li className="nav__item">
+                <a href="#service" className="nav__link">
+                  <span>Service</span>
+                </a>
+              </li>
+              <li className="nav__item">
+                <a href="#featured" className="nav__link">
+                  <span>Featured</span>
+                </a>
+              </li>
 
-                  <li class="nav__item">
-                     <a href="#home" class="nav__link active-link">
-                        <span>home</span>
-                     </a>
-                  </li>
-                  
-                  <li class="nav__item">
-                     <a href="#service" class="nav__link">
-                        <span>Service</span>
-                     </a>
-                  </li>
+              <li className="nav__item">
+                  <Link to="/AboutPage" className="nav__link"><span>About us</span></Link>
+              </li>
 
-                  <li class="nav__item">
-                     <a href="#featured" class="nav__link">
-                        <span>Featured</span>
-                     </a>
-                  </li>
-
-
-                  <li class="nav__item">
-                     <a href="#aboutus" class="nav__link">
-                        <span>About us</span>
-                     </a>
-                  </li>
-
-                  <li class="nav__item">
-                     <a href="#footer" class="nav__link">
-                        <span>Contact</span>
-                     </a>
-                  </li>
-
-               </ul>
-            </div>
-            <div class="nav__actions">
-               <i class="ri-search-line search-button" id="search-button"></i>
-               <i class="ri-moon-line change-theme" id="theme-button"></i>
-            </div>
-         </nav>
+              <li className="nav__item">
+                <a href="#footer" className="nav__link">
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="nav__actions">
+            <i className="ri-search-line search-button" id="search-button"></i>
+            <i className='light' id="theme-button"></i>
+          </div>
+        </nav>
       </header>
-      </section>
-    )
-  }
-  
+    </section>
+  );
+}

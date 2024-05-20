@@ -69,6 +69,7 @@ button {
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background-color .4s;
@@ -146,6 +147,7 @@ body.dark-theme{
 .container {
   max-width: 1220px;
   margin-inline: 1.5rem;
+  
 }
 
 .grid {
