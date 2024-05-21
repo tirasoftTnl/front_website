@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AboutPage from './components/AboutPage';
+import AboutPage from './Pages/About/AboutPage';
 
 import './index.css';
 import App from './App';

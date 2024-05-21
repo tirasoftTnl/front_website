@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Footer from './footer'
+import Footer from '../../components/footer/footer'
 
-import Header from './header'
+import Header from '../../components/header/header'
 
-import { Contact } from './contact'
+import { Contact } from '../../components/contact/contact'
 
 function AboutPage() {
   return (
@@ -12,7 +12,6 @@ function AboutPage() {
         <>
           < Header />
           < Contact />
-
           < Footer />
         </>
       </div>

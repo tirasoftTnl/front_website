@@ -1,11 +1,11 @@
 import './App.css'
-import Header from './components/header'
-import Home from './components/home'
+import Header from './components/header/header'
 import { ThemeProvider } from './themeContext/ThemeContext';
-import Service from './components/service'
-import Featured from './components/featured'
-import Footer from './components/footer'
-import Testimonial from './components/testimonials'
+import Home from './components/home_slider/home'
+import Service from './components/service/service'
+import Featured from './components/products/featured'
+import Footer from './components/footer/footer'
+import Testimonial from './components/testimonial/testimonials'
 
 function App() {
   return (
@@ -28,5 +28,4 @@ function App() {
     </ThemeProvider>
   );
 }
-
 export default App;

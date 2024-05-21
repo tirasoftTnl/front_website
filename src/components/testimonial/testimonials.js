@@ -56,18 +56,19 @@ export default function Testimonial() {
                             }
                             
                             modules={[EffectCoverflow, Navigation, Autoplay]}
-                            >{/*className="swiper_container"*/}
+                            >
+                                {/*className="swiper_container"*/}
 
                             {testimonial_Data.length > 0 ? (
                             testimonial_Data.map((testim, i) => (
                             <article class="testimonial__card">
                                 <SwiperSlide key={testim.id}>
 
-                                <img src={`/${testim.image_testimonial}`} alt={`/${testim.image_testimonial}`} className="testimonial__img"/>
+                                <img src={`/${testim.image_path}`} alt={`/${testim.image_path}`} className="testimonial__img"/>
                                 <center>
-                                <h2 class="testimonial__title">{testim.title_testimonial}</h2>
+                                <h2 class="testimonial__title">{testim.title}</h2>
                                 <p class="testimonial__description">
-                                    {testim.description_testimonial}
+                                    {testim.description}
                                 </p>
                                 <div class="testimonial__stars">
                                 <i class="ri-star-fill"></i>

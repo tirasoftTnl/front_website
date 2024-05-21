@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Card } from "./Cards/Cards";
-
+import { Card } from "../Cards/Cards";
 
 export default function Featured() {
   const [Cards_Data, setCardsData] = useState([])
@@ -26,13 +25,13 @@ export default function Featured() {
           <div className="col">
           {Cards_Data.length > 0 ? (
           Cards_Data.map((card, i) => (
-            <Card key={card.id_card}
-                imgSrc={`/${card.image_card}`}
-                imgAlt={`/${card.image_card}`}
-                title={card.title_card}
-                description={card.description_card}
+            <Card key={card.id}
+                imgSrc={`/${card.image_path}`}
+                imgAlt={`/${card.image_path}`}
+                title={card.title}
+                description={card.description}
                 buttonText="Learn More"
-                link={card.image_card}
+                link={card.image_path}
                 />
 
           ))
