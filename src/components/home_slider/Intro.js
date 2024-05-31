@@ -43,7 +43,7 @@ export default function Intro() {
     <>
       <section id="home">
         <div className="container_home">
-          <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <Swiper pagination={true} loop={true} modules={[Pagination]} className="mySwiper">
             {home_images_backend.length > 0 ? (
               home_images_backend.map((card, i) => (
                 <SwiperSlide key={card.id}>

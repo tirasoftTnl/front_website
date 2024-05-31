@@ -10,7 +10,8 @@ export function SlideWrapper(props: {
     <div
       className={clsx(
         'absolute w-full transition-all duration-300',
-        props.hovering === props.index ? 'opacity-100' : 'opacity-0',
+        props.hovering === props.index ? 'opacity-100' : 
+        'opacity-0 pointer-events-none',
         props.hovering === props.index 
         ? 'transform-none' 
         : props.hovering! > props.index

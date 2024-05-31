@@ -76,32 +76,38 @@ export default function NavLinks() {
             </Link>
           </li>
 
-          {hovering && (
+
+              <div className={clsx(
+                "absolute top-12 pt-6 -ml-24 w-[600px] duration-300",
+                hovering !== null ? "transition-all" : "opacity-0 pointer-events-none"
+              )}
+              style={{left: popoverLeft || undefined}}
+              >
+          
             <div 
-            style={{
-              left : popoverLeft || 0,
-              height : popoverHeight || 0,
-            }}
-            className="absolute rounded-md top-14 shadow bg-white pt-6 -ml-80 bg-white w-[850px] overflow-hidden transform-gpu shadow-lg transition-all duration-300"
+              style={{height : popoverHeight || 100,}}
+              className="absolute rounded-md shadow bg-white pt-6 -ml-80 bg-white w-[850px] overflow-hidden transform-gpu shadow-lg transition-all duration-300"
 
-            >
-            <SlideWrapper index={1} hovering={hovering}>
-              <Menu1 ref={(ref) => (refs.current[1] = ref)} />
-            </SlideWrapper>
+              >
+              <SlideWrapper index={1} hovering={hovering}>
+                <Menu1 ref={(ref) => (refs.current[1] = ref)} />
+              </SlideWrapper>
 
-            <SlideWrapper index={2} hovering={hovering}>
-              <Menu2 ref={(ref) => (refs.current[2] = ref)} />
-            </SlideWrapper>
+              <SlideWrapper index={2} hovering={hovering}>
+                <Menu2 ref={(ref) => (refs.current[2] = ref)} />
+              </SlideWrapper>
 
-            <SlideWrapper index={3} hovering={hovering}>
-              <Menu3 ref={(ref) => (refs.current[3] = ref)} />
-            </SlideWrapper>
+              <SlideWrapper index={3} hovering={hovering}>
+                <Menu3 ref={(ref) => (refs.current[3] = ref)} />
+              </SlideWrapper>
 
-            <SlideWrapper index={4} hovering={hovering}>
-              <Menu4 ref={(ref) => (refs.current[4] = ref)} />
-            </SlideWrapper>  
+              <SlideWrapper index={4} hovering={hovering}>
+                <Menu4 ref={(ref) => (refs.current[4] = ref)} />
+              </SlideWrapper>  
+            </div>
+
+
           </div>
-          )}
         </ul>
         
       </div>

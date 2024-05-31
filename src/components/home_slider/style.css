@@ -13,7 +13,7 @@
 }
 .container_home {
   padding: 0;
-  max-height: 20rem;
+  height: fit-content;
 }
 .swiper_container {
   height: 100%;
@@ -24,7 +24,7 @@
 
 .container_home img {
   width: 100%;
-  height: 24rem;
+  height: 32rem;
   display: block;
   object-fit: cover;
 }
