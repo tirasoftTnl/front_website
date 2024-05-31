@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-
+import './featured.css'
 import { Card } from "../Cards/Cards";
 
 export default function Featured() {
   const [Cards_Data, setCardsData] = useState([])
 
   useEffect(() => {
-    fetch("/api/get_cards").then(
+    fetch("/api/public/products/list").then(
       response => response.json()
     ).then(data => {
+      console.log(data.data)
       // Set the returned data to the state
-      setCardsData(data);
+      setCardsData(data.data);
     }).catch(error => {
       console.error("There was an error fetching the cards:", error);
     })

@@ -1,26 +1,42 @@
-export default function Service() {
-   return (
-      <section class="services section" id="service">
-         <div class="services__container container grid">
-            <article class="services__card">
-               <i class="ri-truck-line"></i>
-               <h3 class="services__title">Free Shipping</h3>
-               <p class="services__description">Order More Than $100</p>
-            </article>
+import React, { useEffect, useState } from "react";
+import './service.css'
+import { ServiceCard } from "../serviceCards/ServiceCards.jsx";
 
-            <article class="services__card">
-               <i class="ri-lock-2-line"></i>
-               <h3 class="services__title">Secure Payment</h3>
-               <p class="services__description">100% Secure Payment</p>
-            </article>
+export default function Services() {
+  const [Cards_Data, setCardsData] = useState([])
 
-            <article class="services__card">
-               <i class="ri-customer-service-2-line"></i>
-               <h3 class="services__title">24/7 Support</h3>
-               <p class="services__description">Call us anytime</p>
-            </article>
-         </div>
+  useEffect(() => {
+    fetch("/api/public/services/list").then(
+      response => response.json()
+    ).then(data => {
+      // Set the returned data to the state
+      setCardsData(data.data);
+    }).catch(error => {
+      console.error("There was an error fetching the services:", error);
+    })
+  }, [])
+  
+    return (
+      <section id="service">
+        <h2 class="section__title">
+            Services
+        </h2>
+
+        <div className="service_line">
+          {Cards_Data?.map((card, i) => (
+            <ServiceCard key={card.id}
+                imgSrc={`/${card.image_path}`}
+                imgAlt={`/${card.image_path}`}
+                title={card.title}
+                description={card.description}
+                />
+
+          ))
+}
+         
+        </div>
+
       </section>
-   )
+    )
   }
   

@@ -1,20 +1,23 @@
 import React from 'react'
 
 import Footer from '../../components/footer/footer'
+import Service from '../../components/service/service'
 
 import Header from '../../components/header/header'
 
 
-function AboutPage() {
+function ServicesPage() {
   return (
     <div>
       <>
         <Header />
+        < Service />
+
         <Footer />
       </>
        
-    </div>
+      </div>
   )
 }
 
-export default AboutPage
+export default ServicesPage

@@ -34,14 +34,16 @@
 }
 
 .card__img {
-  width: 328px;
+  width: 430px;
   border-radius: 1.5rem;
 }
 
 .card__data {
-  width: 280px;
-  background-color: var(--container-color);
-  padding: 1.5rem 2rem;
+  width: 430px;
+  max-height: 450px;
+  overflow-x: auto;
+  background-color: transparent;
+  padding: 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 1rem;
   position: absolute;
@@ -56,6 +58,7 @@
 .card__description {
   display: block;
   font-size: var(--small-font-size);
+  color: var(--white-color);
   margin-bottom: .25rem;
 }
 
@@ -102,7 +105,7 @@
     transform: translateY(-10rem);
   }
   100% {
-    transform: translateY(-7rem);
+    transform: translateY(-35%);
   }
 }
 
@@ -113,14 +116,9 @@
 }
 
 @keyframes remove-data {
-  0% {
-    transform: translateY(-7rem);
-  }
-  50% {
-    transform: translateY(-10rem);
-  }
+
   100% {
-    transform: translateY(.5rem);
+    transform: translateY(9.5rem);
   }
 }
 
@@ -135,7 +133,8 @@
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices *//*
+/* For small devices */
+/*
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;

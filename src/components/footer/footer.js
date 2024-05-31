@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-
+import './footer.css'
 export default function Footer() {
 
     const [FooterData, setFooterData] = useState(null);
 
     useEffect(() => {
-        fetch("/api/about_and_contact").then(
+        fetch("/api/public/info/list").then(
         response => response.json()
         ).then(data => {
+            
         // Set the returned data to the state
-        setFooterData(data);
+        setFooterData(data.data);
         }).catch(error => {
         console.error("There was an error fetching the cards:", error);
         })
