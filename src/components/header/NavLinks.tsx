@@ -78,7 +78,7 @@ export default function NavLinks() {
 
 
               <div className={clsx(
-                "absolute top-12 pt-6 -ml-24 w-[600px] duration-300",
+                "absolute top-8 pt-6 -ml-22 max-w-[600px] duration-800",
                 hovering !== null ? "transition-all" : "opacity-0 pointer-events-none"
               )}
               style={{left: popoverLeft || undefined}}

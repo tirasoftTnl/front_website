@@ -1,12 +1,12 @@
   /*=============== FOOTER ===============*/
 .footer{
+    height: 90vh;
     padding-block: 4rem 6rem;
     background-color: var(--border-color);
 }
   
 .footer__container{
     row-gap: 1rem;
-  
 }
 .footer__logo{
     display: inline-flex;

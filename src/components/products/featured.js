@@ -9,7 +9,6 @@ export default function Featured() {
     fetch("/api/public/products/list").then(
       response => response.json()
     ).then(data => {
-      console.log(data.data)
       // Set the returned data to the state
       setCardsData(data.data);
     }).catch(error => {
@@ -18,8 +17,8 @@ export default function Featured() {
   }, [])
   
     return (
-      <section id="featured">
-        <h2 class="section__title">
+      <section className="featured__container" id="featured">
+        <h2 className="section__title">
             Featured Products
         </h2>
         <div className="App">

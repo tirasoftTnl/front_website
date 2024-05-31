@@ -22,7 +22,7 @@ export const Menu2 = forwardRef<HTMLElement>((props, ref) => {
       </header>
       <ul>
         {tasks.map((task, index) => (
-          <li key={index} className="flex items-center py-4 border-t border-solid border-neutral-200">
+          <li key={index} className="flex items-center py-4 border-t border-solid border-neutral-200 mb-4">
             {task.icon}
             <span>{task.text}</span>
           </li>

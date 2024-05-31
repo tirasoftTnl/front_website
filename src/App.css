@@ -177,7 +177,6 @@ body.dark-theme{
   left: 0;
   width: 100%;
   background-color: transparent;
-  backdrop-filter: blur(3px);
   z-index: var(--z-fixed);
   transition: box-shadow .4s, background-color .4s ease-in-out, backdrop-filter 0.1s ease;
 }
@@ -224,7 +223,8 @@ body.dark-theme{
 }
 
 .nav__link{
-  color: var(--white-color);
+  font-weight: 600;
+  color: var(--title-color);
   transform: color .4s;
 }
 
@@ -234,6 +234,7 @@ body.dark-theme{
 
 .nav__link i{
   font-size: 1.25rem;
+  color: var(--first-color);
 }
 
 .nav__link:hover{
@@ -243,10 +244,11 @@ body.dark-theme{
 .nav__actions{
   position: relative;
   display: flex;
-  margin-right: 4rem;
-  margin-left: 19rem;
+  margin-right: 1rem;
+  margin-left: 35%;
 }
 #nav_actions i{
+  color: var(--title-color);
   margin-top: 1rem;
   padding-left: 0.5rem;
 }
@@ -310,6 +312,9 @@ body.dark-theme{
 }
 
 /*=============== FEATURED ===============*/
+.featured__container{
+  margin-top: 3.5rem;
+}
 .featured__card{
   position: relative;
   text-align: center;
@@ -370,24 +375,6 @@ body.dark-theme{
 
 .featured__card:hover .featured__actions{
   right: 1.5rem;
-}
-
-/* Swiper class */
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  content: '';
-}
-
-.swiper-button-prev,
-.swiper-button-next{
-  width: initial;
-  height: initial;
-  background-color: var(--container-color);
-  border: 2px solid var(--border-color);
-  padding: .5rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-  transition: border .4s background-color .4s;
 }
 
 /*=============== DISCOUNT ===============*/

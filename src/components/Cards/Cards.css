@@ -14,6 +14,8 @@
 /*=============== BASE ===============*/
 
 .card__article img {
+  position: relative;
+  top: 0;
   display: block;
   max-width: 100%;
   height: auto;
@@ -42,23 +44,22 @@
   width: 430px;
   max-height: 450px;
   overflow-x: auto;
-  background-color: transparent;
+  background-color: hsl(230, 100%, 97%);
   padding: 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 1rem;
-  position: absolute;
-  bottom: -9rem;
   left: 0;
   right: 0;
-  margin-inline: auto;
-  opacity: 0;
-  transition: opacity 1s 1s;
+
+  position: relative;
+
+  transition: opacity .2s;
 }
 
 .card__description {
   display: block;
   font-size: var(--small-font-size);
-  color: var(--white-color);
+  color: var(--title-color);
   margin-bottom: .25rem;
 }
 
@@ -81,25 +82,27 @@
 }
 
 /* Naming animations in hover */
+/*
 .card__article:hover .card__data {
-  animation: show-data 1s forwards;
+  animation: show-data 0.5s forwards;
   opacity: 1;
-  transition: opacity .3s;
+  transition: opacity .1s;
 }
 
 .card__article:hover {
-  animation: remove-overflow 2s forwards;
+  animation: remove-overflow;
 }
 
 .card__article:not(:hover) {
-  animation: show-overflow 2s forwards;
+  animation: show-overflowforwards;
 }
 
 .card__article:not(:hover) .card__data {
-  animation: remove-data 1s forwards;
+  animation: remove-data .1s forwards;
 }
-
+*/
 /* Card animation */
+/*
 @keyframes show-data {
   50% {
     transform: translateY(-10rem);
@@ -131,7 +134,7 @@
     overflow: hidden;
   }
 }
-
+*/
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 /*
