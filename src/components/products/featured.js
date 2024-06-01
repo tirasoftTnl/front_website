@@ -33,12 +33,10 @@ export default function Featured() {
                 buttonText="Learn More"
                 link={card.image_path}
                 />
-
           ))
           ) : (
           <p>Loading...</p>)
          }
-
           </div>
         </div>
       </section>

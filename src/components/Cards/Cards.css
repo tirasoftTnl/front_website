@@ -31,28 +31,26 @@
 
 
 .card__article {
-  position: relative;
+  display: flex;
   overflow: hidden;
+  border-radius: 20px;
+  background-color: hsl(230, 56%, 83%);
+  width: 600px;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
 }
 
 .card__img {
-  width: 430px;
+  width: 300px;
   border-radius: 1.5rem;
 }
 
 .card__data {
   width: 430px;
   max-height: 450px;
-  overflow-x: auto;
+  overflow-y: auto;
   background-color: hsl(230, 100%, 97%);
   padding: 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-  border-radius: 1rem;
-  left: 0;
-  right: 0;
-
-  position: relative;
-
   transition: opacity .2s;
 }
 
@@ -99,8 +97,8 @@
 
 .card__article:not(:hover) .card__data {
   animation: remove-data .1s forwards;
-}
-*/
+
+}*/
 /* Card animation */
 /*
 @keyframes show-data {
@@ -133,8 +131,8 @@
   50% {
     overflow: hidden;
   }
-}
-*/
+}*/
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 /*
