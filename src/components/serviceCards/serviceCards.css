@@ -1,0 +1,14 @@
+.CARD-DIV{
+    background-color: white;
+    width: 22rem;
+    height: 15rem;
+    transition: .1s all ease-in-out;
+}
+
+.CARD-DIV:hover{
+    background-color: hsl(231, 100%, 92%);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: -15px;
+    transition: .1s all ease-in-out;
+}

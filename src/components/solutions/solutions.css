@@ -1,0 +1,68 @@
+.solutions-section{
+    margin-top: 4rem;
+    display: flex;
+    background-color: white;
+}
+
+.Product-description-div{
+    background-color: white;
+    width: 60%;
+}
+
+button{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}
+
+.Product-description-title{
+    font-family: "bahnschrift";
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin: 1rem;
+    
+}
+
+
+.Accordions-questions{
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+/* Accordion html from function Accordion */
+.accordion-container-div{
+    padding: 10px;
+    border-bottom: 0.3px solid black;
+    margin-bottom: 1rem;
+    min-height: 3rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Accordions-questions{
+    background-color: transparent;
+}
+
+.the-icon-div{ /*   + or - div container that contains the open/close icons      */
+    background-color: transparent;
+}
+/*.Product-image-div{
+    
+}*/
+.title-div-container{
+    font-size: 1.2rem;
+    font-family: "bahnschrift", serif;
+    color: hsl(230, 70%, 16%);
+    
+}
+.answer-div-container {
+    font-size: 1.1rem;
+    height: auto;
+}
+
+.Product-comp-img{ /*img*/
+    width: 100%;
+}

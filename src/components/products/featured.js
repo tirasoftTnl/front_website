@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './featured.css'
 import { Card } from "../Cards/Cards";
-
 export default function Featured() {
   const [Cards_Data, setCardsData] = useState([])
-
   useEffect(() => {
     fetch("/api/public/products/list").then(
       response => response.json()
@@ -15,7 +13,6 @@ export default function Featured() {
       console.error("There was an error fetching the cards:", error);
     })
   }, [])
-  
     return (
       <section className="featured__container" id="featured">
         <h2 className="section__title">
@@ -42,4 +39,3 @@ export default function Featured() {
       </section>
     )
   }
-  

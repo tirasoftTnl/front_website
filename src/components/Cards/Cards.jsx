@@ -1,7 +1,5 @@
 import React from "react";
-
 import "./Cards.css";
-
 export const Card = ({
   imgSrc,
   imgAlt,

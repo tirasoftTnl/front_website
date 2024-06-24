@@ -85,7 +85,7 @@ const ContactForm = () => {
                                     name="first_name"
                                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                     type="text"
-                                    placeholder="First Name*"
+                                    placeholder="First Name"
                                     value={firstName}
                                     onChange={(e) => setFirstName(e.target.value)}
                                     onKeyUp={clearErrors}
@@ -94,13 +94,12 @@ const ContactForm = () => {
                                     <p className="text-red-500 text-sm">{errors.first_name}</p>
                                 }
                             </div>
-
                             <div>
                                 <input
                                     name="last_name"
                                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                     type="text"
-                                    placeholder="Last Name*"
+                                    placeholder="Last Name"
                                     value={lastName}
                                     onChange={(e) => setLastName(e.target.value)}
                                     onKeyUp={clearErrors}
@@ -109,13 +108,12 @@ const ContactForm = () => {
                                     <p className="text-red-500 text-sm">{errors.last_name}</p>
                                 }
                             </div>
-
                             <div>
                                 <input
                                     name="email"
                                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                     type="email"
-                                    placeholder="Email*"
+                                    placeholder="Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     onKeyUp={clearErrors}
@@ -124,13 +122,12 @@ const ContactForm = () => {
                                     <p className="text-red-500 text-sm">{errors.email}</p>
                                 }
                             </div>
-
                             <div>
                                 <input
                                     name="phone_number"
                                     className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                     type="number"
-                                    placeholder="Phone*"
+                                    placeholder="Phone"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                     onKeyUp={clearErrors}
@@ -143,7 +140,7 @@ const ContactForm = () => {
                         <div className="my-4">
                             <textarea
                                 name="message"
-                                placeholder="Message*"
+                                placeholder="Message"
                                 className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
@@ -163,7 +160,6 @@ const ContactForm = () => {
                 </form>
                 <div className="w-full  lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
                     <div className="flex flex-col text-white">
-
                         <div className="flex my-4 w-2/3 lg:w-3/4">
                             <div className="flex flex-col">
                                 <i className="fas fa-map-marker-alt pt-2 pr-2" />
@@ -173,12 +169,10 @@ const ContactForm = () => {
                                 <p className="text-gray-400">27, rue ibn charaf, bab bhar tunis belvedere 1002</p>
                             </div>
                         </div>
-
                         <div className="flex my-4 w-2/3 lg:w-1/2">
                             <div className="flex flex-col">
                                 <i className="fas fa-phone-alt pt-2 pr-2" />
                             </div>
-
                             <div className="flex flex-col">
                                 <h3 className="text-xl text-white">Call Us</h3>
                                 <p className="text-gray-400">Tel: +216</p>
@@ -187,10 +181,8 @@ const ContactForm = () => {
                                     <h3 className="text-xl text-white">Send an E-mail</h3>
                                     <p className="text-gray-400">info@tirasoft-technology.com</p>
                                 </div>
-
                             </div>
                         </div>
-
                         <div className="flex my-4 w-2/3 lg:w-1/2">
                             <a href="https://www.facebook.com/ENLIGHTENEERING/" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-white h-8 text-blue-900  w-8  mx-1 text-center pt-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='fill-current font-black hover:animate-pulse'><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path></svg>

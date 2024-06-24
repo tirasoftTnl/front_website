@@ -1,51 +1,41 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
-
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1120px) {
   :root {
     --h2-font-size: 1.5rem;
-    --small-font-size: .875rem;
+    --small-font-size: 1rem;
   }
 }
 
 /*=============== BASE ===============*/
 
-.card__article img {
+.card__img {
   position: relative;
   top: 0;
   display: block;
-  max-width: 100%;
+  width: 290px;
   height: auto;
+  border-radius: 1.5rem;
 }
 
 /*=============== CARD ===============*/
-
-
 .card__container {
   display: grid;
   row-gap: 3.5rem;
 }
 
-
 .card__article {
   display: flex;
   overflow: hidden;
   border-radius: 20px;
-  background-color: hsl(230, 56%, 83%);
-  width: 600px;
+  background-color: white;
+  width: fit-content;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
 }
 
-.card__img {
-  width: 300px;
-  border-radius: 1.5rem;
-}
-
 .card__data {
-  width: 430px;
+  width: 600px;
   max-height: 450px;
   overflow-y: auto;
   background-color: hsl(230, 100%, 97%);
@@ -117,7 +107,6 @@
 }
 
 @keyframes remove-data {
-
   100% {
     transform: translateY(9.5rem);
   }

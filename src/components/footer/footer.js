@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import './footer.css'
+import instagram_animation from '../../Animations-Lottie/instagram-animation.json'
+import facebook_animation from '../../Animations-Lottie/facebook-animation.json'
+import twitter_animation from '../../Animations-Lottie/twitter-animation.json'
+
+import Lottie from "lottie-react";
+
+import { motion } from "framer-motion";
+import { fadeIn } from '../../Effects/Variants';
+
 export default function Footer() {
-
     const [FooterData, setFooterData] = useState(null);
-
     useEffect(() => {
         fetch("/api/public/info/list").then(
         response => response.json()
         ).then(data => {
-            
         // Set the returned data to the state
         setFooterData(data.data);
         }).catch(error => {
@@ -18,12 +24,16 @@ export default function Footer() {
     return (
       <section id="footer">
         <footer className="footer">
-            <div className="footer__container container grid">
+            <motion.div 
+            variants={fadeIn('down', 0.3)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.8 }}
+            className="footer__container container grid">
                 <div>
                     <a href="/" className="footer__logo">
                         <i className="ri-book-3-line"></i>Website
                     </a>
-
                     <p className="footer__description">
                         Find and explore the best <br />
                         Products from all the internet<br />
@@ -31,7 +41,7 @@ export default function Footer() {
                 </div>
                 <div className="footer__data grid">
                     <div>
-                        <h3 className="footer__title">About</h3>
+                        <h1 className="footer__title">About</h1>
                         <ul className="footer__links">
                             <li>
                                 <a href="/" className="footer__link">Awards</a>
@@ -53,7 +63,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="footer__title">Company</h3>
+                        <h1 className="footer__title">Company</h1>
                         <ul className="footer__links">
                             <li>
                                 <a href="/" className="footer__link">Blogs</a>
@@ -75,7 +85,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="footer__title">Contact</h3>
+                        <h1 className="footer__title">Contact</h1>
                         <ul className="footer__links">
                             {FooterData && (
                                 <>
@@ -91,8 +101,7 @@ export default function Footer() {
                                 </adress>
                             </li>
                             <li>
-   
-                            <a href={`tel:${FooterData[0].phone}`}>{FooterData[0].phone}</a>
+                                <a href={`tel:${FooterData[0].phone}`}>{FooterData[0].phone}</a>
                             </li>
                             </>
                             )}
@@ -100,27 +109,44 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="footer__title">Social</h3>
                         <div className="footer__social">
                             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
-                                <i className="ri-facebook-line"></i>
+                                <Lottie 
+                                    className="animations-data"
+                                    animationData={facebook_animation} 
+                                    loop={true}
+                                />
                             </a>
 
                             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
-                                <i className="ri-instagram-line"></i>
+                                <Lottie
+                                    className="animations-data"
+                                    animationData={instagram_animation} 
+                                    loop={true}
+                                />
                             </a>
 
                             <a href="https://twitter.com/" target="_blank" rel="noreferrer noopener" className="footer__social-link">
-                                <i className="ri-twitter-x-line"></i>
+                                <Lottie
+                                    className="animations-data"
+                                    animationData={twitter_animation} 
+                                    loop={true}
+                                />
                             </a>     
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <span className="footer__copy">
+            <motion.span
+            variants={fadeIn('up', 0.5)}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+
+            className="footer__copy">
                 &#169; All Rights Reserved By Tirasoft
-            </span>
+            </motion.span>
         </footer>
       </section>
     )

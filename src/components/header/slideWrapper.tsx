@@ -15,8 +15,8 @@ export function SlideWrapper(props: {
         props.hovering === props.index 
         ? 'transform-none' 
         : props.hovering! > props.index
-        ? "-translate-x-24"
-        : "translate-x-24",
+        ? "-translate-x-2"
+        : "translate-x-2",
       )}
     >
       {props.children}

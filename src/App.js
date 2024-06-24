@@ -3,6 +3,9 @@ import ProductsPage from './Pages/Products/productsPage';
 import ServicesPage from './Pages/services/servicesPage';
 import Home from './Pages/Home'
 import Contact from './Pages/contact/contact';
+import CloudPage from './Pages/Products/Cloud/CloudPage';
+import OnPromisePage from './Pages/Products/OnPromise/OnPromisePage';
+import TelephonesPage from './Pages/Products/Telephones/telephonesPage';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +23,10 @@ function App() {
           <Route path="/product" element={ < ProductsPage />} />
           <Route path="/about" element={ < AboutPage />} />
           <Route path="/services" element={ < ServicesPage />} />
+          <Route path="/telephones_Page" element={ < TelephonesPage />} />
+          <Route path="/cloud_Page" element={ < CloudPage />} />
+          <Route path="/OnPromise_Page" element={ < OnPromisePage />} />
+          
         </Routes>
       </ScrollToTop>
     </Router>
