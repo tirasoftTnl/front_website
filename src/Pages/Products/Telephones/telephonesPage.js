@@ -1,4 +1,4 @@
-import React , {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../../../components/header/header'
 import Footer from '../../../components/footer/footer';
 import Featured from '../../../components/products/featured';
@@ -17,7 +17,7 @@ function TelephonesPage() {
       .catch(error => {
         console.error("There was an error fetching the products:", error);
       });
-
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const header = document.querySelector(".header");
       if (header) {
@@ -28,7 +28,6 @@ function TelephonesPage() {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

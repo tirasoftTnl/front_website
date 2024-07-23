@@ -5,7 +5,6 @@ import { fadeIn } from "../../Effects/Variants";
 
 export default function Accordion({ title, answer }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
-
   return (
     <motion.div
       variants={fadeIn("right", 0.3)}
@@ -17,30 +16,25 @@ export default function Accordion({ title, answer }) {
     >
       <button className="flex justify-between w-full">
         <span className="title-div-container">{title}</span>
-        <svg
-          className="the-icon-div fill-indigo-500 shrink-0 ml-8"
-          width="16"
-          height="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="the-icon-div fill-indigo-500 shrink-0 ml-8" width="16" height="16"
+          xmlns="http://www.w3.org/2000/svg">
           <rect
             y="7"
             width="16"
             height="2"
             rx="1"
-            className={`transform origin-center transition duration-200 ease-out ${
-              accordionOpen ? "rotate-180" : ""
-            }`}
+            className={`transform origin-center transition duration-200 ease-out ${accordionOpen && "!rotate-180"
+              }`}
           />
           <rect
             y="7"
             width="16"
             height="2"
             rx="1"
-            className={`transform origin-center rotate-90 transition duration-300 ease-out ${
-              accordionOpen ? "rotate-180" : ""
-            }`}
+            className={`transform origin-center rotate-90 transition duration-200 ease-out ${accordionOpen && "!rotate-180"
+              }`}
           />
+
         </svg>
       </button>
       <motion.div
@@ -49,7 +43,7 @@ export default function Accordion({ title, answer }) {
           height: accordionOpen ? "auto" : 0,
           opacity: accordionOpen ? 1 : 0,
         }}
-        transition={{ duration: 0.2, ease: "easeInOut" }}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
       >
         <div className="answer-div-container">{answer}</div>
       </motion.div>

@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 import Carousel from '../Carousel/Carousel'
-import './style.css'
-import { motion } from "framer-motion"
-import { fadeIn } from '../../Effects/Variants';
 
 
 export default function Intro() {
@@ -25,14 +22,7 @@ export default function Intro() {
   return (
     <>
       <section id="home">
-        <motion.div
-              variants={fadeIn('', 0.6)}
-              initial='hidden'
-              whileInView={'show'}
-              viewport={{ once: true}}
-              className="container_home">
-          <Carousel/>
-        </motion.div>
+        <Carousel />
       </section>
     </>
   );

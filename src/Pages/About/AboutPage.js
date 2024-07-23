@@ -4,6 +4,9 @@ import Header from '../../components/header/header';
 
 function AboutPage() {
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       const header = document.querySelector(".header");
       if (header) {
@@ -16,6 +19,7 @@ function AboutPage() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

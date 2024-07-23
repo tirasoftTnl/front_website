@@ -1,5 +1,5 @@
 import React, { forwardRef, useState, useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
+import { FiMenu, FiPhone } from "react-icons/fi";
 import { HiOutlineServer } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { GoCloud } from "react-icons/go";
@@ -68,7 +68,14 @@ export const Menu2 = forwardRef<HTMLElement>((props, ref) => {
       <div className="container-of-menu2-desc flex">
         <div className="links-container">
           <ul>
-            <li className="telephone_link_class flex items-center mb-1">
+          <li className="telephone_link_class flex items-center">
+              <Link to="/product" className="LINK_class flex items-center">
+                <FiMenu className="mr-2" />
+                <span>All Products</span>
+              </Link>
+            </li>
+
+            <li className="telephone_link_class flex items-center border-t border-solid border-neutral-300 mb-1">
               <Link to="/telephones_Page" className="LINK_class flex items-center"
               onMouseEnter={() => handleProductHover("Telephone System Products")}
               >

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-function Carousel() {
+import { motion } from "framer-motion"
+import { fadeIn } from '../../Effects/Variants';
+
+
+export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [homeImagesBackend, setHomeImagesBackend] = useState([]);
   useEffect(() => {
@@ -34,7 +38,13 @@ function Carousel() {
     setCurrentIndex(slideIndex);
   };
   return (
-    <div className='max-w-[1900px] h-[780px] w-full relative group'>
+    <motion.div
+      variants={fadeIn('', 0.6)}
+      initial='hidden'
+      whileInView={'show'}
+      viewport={{ once: true }}
+      
+      className='max-w-[1900px] my-24 h-[590px] w-full relative group'>
       {homeImagesBackend.length > 0 && (
         <div
           style={{ backgroundImage: `url(/${homeImagesBackend[currentIndex]?.img_path})` }}
@@ -44,27 +54,27 @@ function Carousel() {
       {/* Left Arrow */}
       <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 
       translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white 
-      cursor-pointer'>
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+      cursor-pointer'
+        onClick={prevSlide}>
+        <BsChevronCompactLeft size={30} />
       </div>
       {/* Right Arrow */}
       <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 
       translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white 
-      cursor-pointer'>
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
+      cursor-pointer'
+        onClick={nextSlide}>
+        <BsChevronCompactRight size={30} />
       </div>
       <div className='flex justify-center '>
         {homeImagesBackend.map((slide, slideIndex) => (
           <div
             key={slide.id}
             onClick={() => goToSlide(slideIndex)}
-            className='text-2xl cursor-pointer'
-          >
+            className='text-2xl cursor-pointer'>
             <RxDotFilled />
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
-export default Carousel;

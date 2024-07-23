@@ -5,6 +5,7 @@ import ProductCategories from '../../components/ProductCategory/ProductCategorie
 import Carousel_produit from '../../components/Carousel/Carousel_produit';
 function ProductsPage() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const header = document.querySelector(".header");
       if (header) {
@@ -15,24 +16,18 @@ function ProductsPage() {
         }
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div>
-      < Header />
-      
-      < Carousel_produit />
-
-      < ProductCategories />
-      < Footer />
+      <Header />
+      <Carousel_produit />
+      <ProductCategories />
+      <Footer />
     </div>
   );
 }
-
 export default ProductsPage;

@@ -1,22 +1,12 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1120px) {
-  :root {
-    --h2-font-size: 1.5rem;
-    --small-font-size: 1rem;
-  }
-}
-
-/*=============== BASE ===============*/
 
 .card__img {
   position: relative;
   top: 0;
   display: block;
   width: 290px;
-  height: auto;
-  border-radius: 1.5rem;
+  height: 290px;
 }
 
 /*=============== CARD ===============*/
@@ -36,7 +26,7 @@
 
 .card__data {
   width: 600px;
-  max-height: 450px;
+  max-height: 300px;
   overflow-y: auto;
   background-color: hsl(230, 100%, 97%);
   padding: 2rem;

@@ -6,28 +6,14 @@ import ContactForm from './contactForm';
 import 'tailwindcss/tailwind.css';
 import './contact.css'
 
+import Carousel from '../../components/Carousel/Carousel';
 import { motion } from "framer-motion"
 import { fadeIn } from '../../Effects/Variants';
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/navigation';
-import { Pagination } from 'swiper/modules';
-
-
 
 const Contact = () => {
-  const [home_images_backend, setHomeImagesBackend] = useState([])
   useEffect(() => {
-    fetch("/api/public/images/list").then(
-      response => response.json()
-    ).then(data => {
-      setHomeImagesBackend(data.data);
-    }).catch(error => {
-      console.error("There was an error fetching the cards:", error);
-    });
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const header = document.querySelector(".header");
       if (header) {
@@ -51,24 +37,14 @@ const Contact = () => {
           <NavBar />
 
           <div className='carousel-container'>
-          <motion.div
-        variants={fadeIn('', 1.4)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: true}}
-        className="container_home">
-          <Swiper pagination={true} loop={true} modules={[Pagination]} className="mySwiper">
-            {home_images_backend.length > 0 ? (
-              home_images_backend.map((card, i) => (
-                <SwiperSlide key={card.id}>
-                  <img src={`/${card.img_path}`} alt={`/${card.img_path}`} class="home__img" />
-                </SwiperSlide>
-              ))
-            ) : (
-                <p>Loading...</p>)
-            }
-          </Swiper>
-          </motion.div>
+            <motion.div
+              variants={fadeIn('', 1.4)}
+              initial='hidden'
+              whileInView={'show'}
+              viewport={{ once: true }}
+              className="container_home">
+              < Carousel />
+            </motion.div>
           </div>
 
         </div>
