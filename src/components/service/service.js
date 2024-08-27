@@ -15,35 +15,35 @@ export default function Services() {
       console.error("There was an error fetching the services:", error);
     })
   }, [])
-    return (
-      <section id="service">
-        <motion.div
-          variants={fadeIn('up', 0.3)}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: true, amount: 0.8 }}
-        >
-            <h2 class="section__title">
-                Services
-            </h2>
-        </motion.div>
-        <div className="service_line">
-          {Cards_Data?.map((card, i) => (
-            <motion.div
+  return (
+    <section>
+      <motion.div
+        variants={fadeIn('up', 0.3)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{ once: true, amount: 0.8 }}
+      >
+        <h2 class="section__title">
+          Services
+        </h2>
+      </motion.div>
+      <div className="service_line">
+        {Cards_Data?.map((card, i) => (
+          <motion.div
             variants={fadeIn('down', 0.3)}
             initial='hidden'
             whileInView={'show'}
             viewport={{ once: true, amount: 0.8 }}
-            >
-              <ServiceCard key={card.id}
-                  imgSrc={`/${card.image_path}`}
-                  imgAlt={`/${card.image_path}`}
-                  title={card.title}
-                  description={card.description}
-                  />
-            </motion.div>
-              ))}
-        </div>
-      </section>
-    )
-  }
+          >
+            <ServiceCard key={card.id}
+              imgSrc={`/${card.image_path}`}
+              imgAlt={`/${card.image_path}`}
+              title={card.title}
+              description={card.description}
+            />
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  )
+}

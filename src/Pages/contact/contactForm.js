@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css';
 import React, { useState } from 'react';
 import { useDocTitle } from '../../components/CustomHook';
 import axios from 'axios';
+import './contact.css'
 //import emailjs from 'emailjs-com';
 import Notiflix from 'notiflix';
 const ContactForm = () => {
@@ -71,13 +72,12 @@ const ContactForm = () => {
     return (
         <>
             <div className="container mx-auto my-8 px-4 lg:px-20" data-aos="zoom-in">
-
-
                 <form onSubmit={sendEmail}>
-
                     <div className="w-full bg-white p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                         <div className="flex">
-                            <h3 className="font-bold text-center lg:text-left text-blue-900 uppercase text-2xl">Fill out the form and we'll be in touch soon!</h3>
+                            <h3 className="font-bold text-center lg:text-left text-blue-900 uppercase text-2xl">
+                                Fill out the form and we'll be in touch soon!
+                            </h3>
                         </div>
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                             <div>
@@ -165,8 +165,12 @@ const ContactForm = () => {
                                 <i className="fas fa-map-marker-alt pt-2 pr-2" />
                             </div>
                             <div className="flex flex-col">
-                                <h3 className="text-xl text-white">Office Address</h3>
-                                <p className="text-gray-400">27, rue ibn charaf, bab bhar tunis belvedere 1002</p>
+                                <h3 className="text-xl text-white">
+                                    Office Address
+                                </h3>
+                                <p className="text-gray-400">
+                                    27, rue ibn charaf, bab bhar tunis belvedere 1002
+                                </p>
                             </div>
                         </div>
                         <div className="flex my-4 w-2/3 lg:w-1/2">

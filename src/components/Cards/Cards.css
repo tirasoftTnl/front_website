@@ -1,15 +1,13 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
+/* Base styles */
 .card__img {
   position: relative;
   top: 0;
   display: block;
-  width: 290px;
-  height: 290px;
+  width: 250px;
 }
 
-/*=============== CARD ===============*/
 .card__container {
   display: grid;
   row-gap: 3.5rem;
@@ -21,12 +19,12 @@
   border-radius: 20px;
   background-color: white;
   width: fit-content;
+  height: 300px;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
 }
 
 .card__data {
-  width: 600px;
-  max-height: 300px;
+  width: 400px;
   overflow-y: auto;
   background-color: hsl(230, 100%, 97%);
   padding: 2rem;
@@ -59,95 +57,21 @@
   text-decoration: underline;
 }
 
-/* Naming animations in hover */
-/*
-.card__article:hover .card__data {
-  animation: show-data 0.5s forwards;
-  opacity: 1;
-  transition: opacity .1s;
-}
-
-.card__article:hover {
-  animation: remove-overflow;
-}
-
-.card__article:not(:hover) {
-  animation: show-overflowforwards;
-}
-
-.card__article:not(:hover) .card__data {
-  animation: remove-data .1s forwards;
-
-}*/
-/* Card animation */
-/*
-@keyframes show-data {
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(-35%);
-  }
-}
-
-@keyframes remove-overflow {
-  to {
-    overflow: initial;
-  }
-}
-
-@keyframes remove-data {
-  100% {
-    transform: translateY(9.5rem);
-  }
-}
-
-@keyframes show-overflow {
-  0% {
-    overflow: initial;
-    pointer-events: none;
-  }
-  50% {
-    overflow: hidden;
-  }
-}*/
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-/*
-@media screen and (max-width: 340px) {
-  .container {
-    margin-inline: 1rem;
+/* Responsive styles */
+@media (max-width: 500px) {
+  .card__article {
+    flex-direction: column; /* Stack the image on top and details below */
+    align-items: center; /* Center the content */
+    height: max-content;
   }
 
-  .card__data {
-    width: 250px;
-    padding: 1rem;
-  }
-}
-*/
-/* For medium devices *//*
-@media screen and (min-width: 768px) {
-  .card__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
-  }
-}
-*/
-/* For large devices *//*
-@media screen and (min-width: 1120px) {
-  .container {
-    height: 100vh;
-  }
-
-  .card__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .card__img {
-    width: 348px;
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain aspect ratio */
   }
+
   .card__data {
-    width: 316px;
-    padding-inline: 2.5rem;
+    width: 100%; /* Make the data section full width */
+    max-height: 200px; /* Remove max-height to allow content to grow */
   }
-}*/
+}

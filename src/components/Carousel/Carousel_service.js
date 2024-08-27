@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { fadeIn } from '../../Effects/Variants';
 
 
-export default function Carousel_Services() {
+export default function CarouselServices() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [homeImagesBackend, setHomeImagesBackend] = useState([]);
   useEffect(() => {

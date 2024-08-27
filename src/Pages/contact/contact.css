@@ -1,10 +1,10 @@
-.carousel-container{
-  margin-top: 1.5rem;
+h1,h2,h3,h3,h4,h5,h6,p,span{
+  font-family: Arial, sans-serif;
 }
+
 .container_home {
   padding: 0;
   height: 90vh;
-  margin-bottom: 3.5rem;
 }
 
 .container_home img {
@@ -27,8 +27,14 @@
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media (max-width: 1020px) {
+  .container_home {
+    margin-bottom: 0;
+  }
 }

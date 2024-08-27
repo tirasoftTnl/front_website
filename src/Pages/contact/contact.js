@@ -5,6 +5,7 @@ import MapLocation from './mapLocation';
 import ContactForm from './contactForm';
 import 'tailwindcss/tailwind.css';
 import './contact.css'
+import Index from '../../components/PhoneNavigation/index'
 
 import Carousel from '../../components/Carousel/Carousel';
 import { motion } from "framer-motion"
@@ -32,7 +33,8 @@ const Contact = () => {
 
   return (
     <>
-      <div id="contact items-center container mx-auto my-8 px-4 lg:px-20">
+      <Index />
+      <div id="contact items-center container">
         <div>
           <NavBar />
 
@@ -50,14 +52,14 @@ const Contact = () => {
         </div>
 
 
-        <div className="fas alt-font text-center w-full bg-gray py-12 lg:py-24 text-2xl mt-12">
-          <h1> LOOKING FOR AN EXCELLENT SOLUTION ?</h1>
+        <div className="text-center w-full bg-gray text-2xl">
+          <h1>LOOKING FOR AN EXCELLENT SOLUTION ?</h1>
           <h1>CONTACT US ! </h1>
         </div>
         <div>
           <ContactForm />
         </div>
-        <div className="flex justify-center mt-4 w-full bg-gray py-12 lg:py-24">
+        <div className="flex justify-center w-full bg-gray">
           <MapLocation />
         </div>
         <Footer />

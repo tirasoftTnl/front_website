@@ -49,7 +49,6 @@ export default function NavLinks() {
               onClick={(event) => {
                 onToggleMenu(2, event.currentTarget);
               }}>
-              <i className="ri-book-3-line"></i>
               <div className='flex'>
                 <FiMenu className='mt-1 mr-2' />
                 <span>Products</span>
@@ -58,20 +57,17 @@ export default function NavLinks() {
           </li>
           <li className="nav__item">
             <Link to="/services" className="nav__link">
-              <i className="ri-message-3-line"></i>
               <span>Services</span>
             </Link>
           </li>
           <li className="nav__item">
             <Link to="/about" className="nav__link">
-              <i className="ri-book-3-line"></i>
-              <span>About Us</span>
+              <span>About</span>
             </Link>
           </li>
           <li className="nav__item">
             <Link to="/contact" className="nav__link">
-              <i className="ri-book-3-line"></i>
-              <span>Contact Us</span>
+              <span>Contact</span>
             </Link>
           </li>
           <div className={clsx(

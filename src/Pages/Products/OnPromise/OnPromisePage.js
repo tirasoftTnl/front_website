@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Index from '../../../components/PhoneNavigation/index'
 
 import Header from '../../../components/header/header'
 import FeaturedONP from '../../../components/products/featuredOnP'
@@ -24,6 +25,7 @@ function OnPromisePage() {
   return (
     <>
       < Header />
+      < Index />
       < FeaturedONP />
     </>
   )

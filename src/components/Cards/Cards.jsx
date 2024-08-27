@@ -15,7 +15,8 @@ export const Card = ({
           {imgSrc && imgAlt && (<img src={imgSrc} alt={imgAlt} className="card__img" />)}
           <div class="card__data">
               {title && <h2 class="card__title">{title}</h2>}
-              {buttonText && link && (<a href={link} className="card__button">{buttonText}</a>)}
+              {//buttonText && link && (<a href={link} className="card__button">{buttonText}</a>)
+              }
               {description && <span class="card__description">{description}{description}</span>}
           </div>
         </article>

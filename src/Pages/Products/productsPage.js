@@ -3,6 +3,8 @@ import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import ProductCategories from '../../components/ProductCategory/ProductCategories';
 import Carousel_produit from '../../components/Carousel/Carousel_produit';
+import Index from '../../components/PhoneNavigation/index'
+
 function ProductsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,6 +26,7 @@ function ProductsPage() {
   return (
     <div>
       <Header />
+      < Index />
       <Carousel_produit />
       <ProductCategories />
       <Footer />

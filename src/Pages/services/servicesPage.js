@@ -3,7 +3,8 @@ import './service.css';
 import Footer from '../../components/footer/footer';
 import Service from '../../components/service/service';
 import Header from '../../components/header/header';
-import Carousel_Services from '../../components/Carousel/Carousel_service';
+import CarouselServices from '../../components/Carousel/Carousel_service';
+import Index from '../../components/PhoneNavigation/index'
 
 function ServicesPage() {
   useEffect(() => {
@@ -27,10 +28,10 @@ function ServicesPage() {
     <div>
       <>
         <Header />
-        < Carousel_Services />
-        <div className="service_container_page">
-          <Service />
-        </div>
+        < Index />
+
+        <CarouselServices />
+        <Service />
         <Footer />
       </>
     </div>

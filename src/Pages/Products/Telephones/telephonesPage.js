@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from '../../../components/header/header'
 import Footer from '../../../components/footer/footer';
 import Featured from '../../../components/products/featured';
+import Index from '../../../components/PhoneNavigation/index'
 
 function TelephonesPage() {
 
@@ -38,8 +39,12 @@ function TelephonesPage() {
     <div>
       <>
         <Header />
+        <Index />
+        <Featured />
+        {/*
+        
+        */}
         <div className="Products_container_in_page">
-          <Featured />
         </div>
         <Footer />
       </>

@@ -4,7 +4,6 @@ import img from '../img/Product-comp-removebg.png';
 import { motion } from "framer-motion";
 import { fadeIn } from '../../Effects/Variants';
 import Accordion from './Accordion';
-
 export default function Solutions() {
   return (
     <section className="solutions-section">
@@ -129,7 +128,4 @@ export default function Solutions() {
       </div>
     </section>
   );
-  /*      <div className='solution-section-data'>
-          </div>
-*/
 }

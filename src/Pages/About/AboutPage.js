@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
+import Index from '../../components/PhoneNavigation/index'
 
 function AboutPage() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function AboutPage() {
     <div>
       <>
         <Header />
+        < Index />
         <Footer />
       </>
     </div>

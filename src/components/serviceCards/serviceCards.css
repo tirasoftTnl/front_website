@@ -1,7 +1,7 @@
 .CARD-DIV{
     background-color: white;
-    width: 22rem;
-    height: 15rem;
+    max-width: 300px;
+    height: 300px;
     transition: .1s all ease-in-out;
 }
 
